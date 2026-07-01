@@ -92,7 +92,7 @@ class ManufacturerTest(TestCase):
         )
         response = self.client.post(
             reverse(
-                "manufacturers-update", kwargs={"pk": manufacturer.id}
+                "taxi:manufacturer-update", kwargs={"pk": manufacturer.id}
             ),
             {"name": "Not Lincoln", "country": "USA"},
         )
